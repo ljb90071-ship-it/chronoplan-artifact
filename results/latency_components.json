@@ -1,0 +1,6 @@
+{
+  "policy": "ChronoPlan",
+  "journal_force_p99_ms": 3.9,
+  "sink_persistence_p99_ms": 4.6,
+  "aggregation": "Separate marginal quantiles; do not sum to obtain end-to-end p99."
+}

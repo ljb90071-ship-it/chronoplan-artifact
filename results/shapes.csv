@@ -1,0 +1,4 @@
+shape,n,m,L,entry_bytes
+adjacent,20,1,1,96
+disjoint,20,39,20,1920
+staggered,20,39,39,3744

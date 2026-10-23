@@ -1,0 +1,6 @@
+policy,peak_gib,integrated_gib_min,converted_gib,sealed_core_s,p99_ms,planner_percent
+Endpoint,12.8,214,0,0,126,0
+Static,11.7,198,0,0,132,0
+Retain,10.6,179,14.8,190,112,0.3
+EagerSynth,11.4,174,42.6,0,118,0.3
+ChronoPlan,10.2,171,19.2,78,109,0.4

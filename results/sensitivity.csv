@@ -1,0 +1,6 @@
+setting,value,integrated_gib_min,p99_ms,abandon_percent,peak_gib
+lifetime_multiplier,2,176,113,,
+lifetime_multiplier,0.5,181,119,,
+update_cap,1024,178,,11,
+update_cap,4096,171,109,4,10.2
+update_cap,8192,170,,2,10.8

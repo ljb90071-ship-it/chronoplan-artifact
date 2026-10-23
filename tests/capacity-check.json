@@ -1,0 +1,24 @@
+{
+  "disjoint": {
+    "n": 20000,
+    "m": 39999,
+    "L": 20000,
+    "latest_end": 39999,
+    "reserved_bytes": 2321408,
+    "reserved_MiB": 2.2138671875,
+    "target_allowance_MiB": 3,
+    "fits": true
+  },
+  "staggered": {
+    "n": 20000,
+    "m": 39999,
+    "L": 39999,
+    "latest_end": 39999,
+    "reserved_bytes": 4241312,
+    "reserved_MiB": 4.044830322265625,
+    "target_allowance_MiB": 3,
+    "fits": false
+  },
+  "node_size": 96,
+  "scope": "Actual response scans, illustrative ctypes layout and arithmetic under the specified allocator; no streaming implementation or measured memory/performance."
+}

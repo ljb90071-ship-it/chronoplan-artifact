@@ -1,0 +1,7 @@
+{
+  "seeds": 30,
+  "logical_epochs": 1800,
+  "response_replacements": 5165,
+  "mismatches": 0,
+  "scope": "Sequential bilateral COUNT/SUM, independent frontiers, two join keys and both-side routing, repeated output-neutral synthesis. No concurrency, persistence, performance or PDF execution."
+}

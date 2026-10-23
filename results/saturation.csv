@@ -1,0 +1,4 @@
+policy,rate_million_records_s,measured_billion_records
+Retain,1.1,1.32
+EagerSynth,1.06,1.272
+ChronoPlan,1.12,1.344

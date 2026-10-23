@@ -1,0 +1,55 @@
+{
+  "window": 3,
+  "duration": 6,
+  "epochs": [
+    {
+      "intervals": [
+        [
+          "tenant",
+          "a",
+          0,
+          6,
+          2
+        ],
+        [
+          "tenant",
+          "b",
+          0,
+          6,
+          -2
+        ]
+      ],
+      "points": [
+        [
+          "tenant",
+          "meter",
+          2,
+          3
+        ]
+      ],
+      "next_fr": 1,
+      "next_fs": 2
+    },
+    {
+      "intervals": [
+        [
+          "tenant",
+          "a",
+          1,
+          7,
+          -2
+        ]
+      ],
+      "points": [
+        [
+          "tenant",
+          "meter",
+          3,
+          4
+        ]
+      ],
+      "next_fr": 3,
+      "next_fs": 4
+    }
+  ]
+}

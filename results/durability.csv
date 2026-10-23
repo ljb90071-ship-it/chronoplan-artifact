@@ -1,0 +1,4 @@
+policy,checkpoint_gib,journal_mib_s,recovery_s,setup_s,setup_peak_gib
+Retain,9.9,86,8.8,38,14.2
+EagerSynth,9.7,101,9.4,38,14.2
+ChronoPlan,9.6,91,8.6,38,14.2

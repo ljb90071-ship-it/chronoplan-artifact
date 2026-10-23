@@ -1,0 +1,50 @@
+{
+  "shape_counts": {
+    "adjacent": {
+      "m": 1,
+      "L": 1,
+      "bytes": 96
+    },
+    "disjoint": {
+      "m": 39,
+      "L": 20,
+      "bytes": 1920
+    },
+    "staggered": {
+      "m": 39,
+      "L": 39,
+      "bytes": 3744
+    }
+  },
+  "exhaustive_states": 6622,
+  "response_probes": 33110,
+  "random_epochs": 9600,
+  "random_probes": 153600,
+  "catchup_cases": 119196,
+  "gap_example": {
+    "snapshot_runs": 2,
+    "canonical_after_one_update": 5,
+    "append_target_entries": 3
+  },
+  "shared_end_synthetic_rows": [
+    [
+      5,
+      10,
+      2,
+      1
+    ]
+  ],
+  "long_chain_internal_D_counterexample": [
+    [
+      0,
+      20,
+      1,
+      2
+    ]
+  ],
+  "expansion_example": {
+    "original_projected_entries": 20,
+    "synthetic_runs": 39
+  },
+  "scope": "Exact integer response algebra and count of entries only; no performance, WAL, concurrency or PDF verification."
+}

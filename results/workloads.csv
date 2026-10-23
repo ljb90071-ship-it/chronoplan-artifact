@@ -1,0 +1,5 @@
+workload,equality_keys,max_duration_s,window_s,eligible_keys_per_end,interval_routing,point_fraction
+Campaign,50000,21600,300,18.4,account,0.9
+Tariff,20000,86400,60,31.7,meter class,0.9
+Entitlement,500000,7200,300,3.2,tenant; permission,0.8
+FixedBand,1000000,1800,60,1,service; request class,0.5
