@@ -6,13 +6,15 @@ it and opens a different writer. With two, `MergeRetain(Y)` first merges their
 responses into one Endpoint target, which becomes sealed beside the new writer.
 There is one installation and one cooldown event. Retain's adapter ablation can
 use this merge without synthesizing old intervals. EagerSynth permits only Stay
-and Replace. All candidates use the same budget and prediction rules.
+and Replace. All candidates use the same budget and prediction rules. A Projected
+replacement can use a disjoint sweep or a successfully paired snapshot. The
+mixed and stationary comparisons hold the disjoint adapter fixed. Section 6.3
+tests packing and pairing on the same snapshots.
 
 The code in [planner.py](../src/planner.py) enumerates this grammar and provides
 the numerical forecast primitives. The [decision example](../examples/decision.py)
 combines them with `Action/choose`. Its input CPU and memory-time values are
-illustrative costs in the paper's worked example, not a calibration dataset or
-a candidate log from the changing workload.
+illustrative costs in the paper's fixed-occupancy comparison.
 
 ## Bounded profiles
 
@@ -30,7 +32,12 @@ If an entire primitive table is empty, that candidate is unavailable; Stay
 remains possible. Lookup navigation and payload accumulation have separate
 coefficients. A Projected probe's payload count uses the trailing matches/probe
 ratio clipped to the predicted population. This is a cost estimate, not a
-logarithmic worst-case bound on an overlapping interval query.
+logarithmic worst-case bound on an overlapping interval query. For newly
+synthesized state, a snapshot hit profile can be built from up to 64 recent
+probe offsets relative to their point frontiers, rebased at the build frontier.
+Each disjoint snapshot contributes zero or one hit. Paired history contributes
+as many hits as unmatched starts at each probe. Add the ordinary new-key hit
+profile and bound total hits by the predicted live population.
 
 `lifetime_bins` maps current residual removal thresholds to powers-of-two upper
 edges plus an overflow maximum. Thresholds are measured in microseconds and

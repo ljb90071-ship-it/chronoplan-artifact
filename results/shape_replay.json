@@ -1,0 +1,204 @@
+{
+  "n": 20000,
+  "update_cap": 4096,
+  "budget_bytes": 3145728,
+  "open_limit": 64,
+  "probes_per_shape": 40000,
+  "shapes": {
+    "gaps": {
+      "derivative_keys": 39999,
+      "disjoint_entries": 20000,
+      "paired_entries": 20000,
+      "peak_unmatched": 1,
+      "reserved_bytes": {
+        "disjoint": 2321408,
+        "paired": 2321408,
+        "packed": 1369600
+      },
+      "fits": {
+        "disjoint": true,
+        "paired": true,
+        "packed": true
+      },
+      "index_requests": {
+        "disjoint": 39999,
+        "paired": 39999,
+        "packed": 79998
+      },
+      "historical_rows_touched": {
+        "disjoint": 20000,
+        "paired": 20000,
+        "packed": 20000
+      }
+    },
+    "overlap": {
+      "derivative_keys": 39999,
+      "disjoint_entries": 39999,
+      "paired_entries": 20000,
+      "peak_unmatched": 2,
+      "reserved_bytes": {
+        "disjoint": 4241312,
+        "paired": 2321408,
+        "packed": 2329552
+      },
+      "fits": {
+        "disjoint": false,
+        "paired": true,
+        "packed": true
+      },
+      "index_requests": {
+        "disjoint": 39999,
+        "paired": 39999,
+        "packed": 79998
+      },
+      "historical_rows_touched": {
+        "disjoint": 39999,
+        "paired": 59998,
+        "packed": 39999
+      }
+    },
+    "changing_sum": {
+      "derivative_keys": 39999,
+      "disjoint_entries": 39999,
+      "paired_entries": null,
+      "peak_unmatched": null,
+      "reserved_bytes": {
+        "disjoint": 4241312,
+        "paired": null,
+        "packed": 2329552
+      },
+      "fits": {
+        "disjoint": false,
+        "paired": null,
+        "packed": true
+      },
+      "index_requests": {
+        "disjoint": 39999,
+        "paired": null,
+        "packed": 79998
+      },
+      "historical_rows_touched": {
+        "disjoint": 39999,
+        "paired": null,
+        "packed": 39999
+      }
+    }
+  },
+  "small_cut": {
+    "frontier": 2,
+    "source": [
+      [
+        0,
+        6,
+        1,
+        2
+      ],
+      [
+        3,
+        8,
+        1,
+        -1
+      ]
+    ],
+    "changes": [
+      [
+        3,
+        [
+          1,
+          -1
+        ]
+      ],
+      [
+        6,
+        [
+          -1,
+          -2
+        ]
+      ],
+      [
+        8,
+        [
+          -1,
+          1
+        ]
+      ]
+    ],
+    "base": [
+      1,
+      2
+    ],
+    "sweep": [
+      [
+        2,
+        3,
+        1,
+        2
+      ],
+      [
+        3,
+        6,
+        2,
+        1
+      ],
+      [
+        6,
+        8,
+        1,
+        -1
+      ]
+    ],
+    "paired": [
+      [
+        2,
+        6,
+        1,
+        2
+      ],
+      [
+        3,
+        8,
+        1,
+        -1
+      ]
+    ],
+    "catchup": [
+      2,
+      7,
+      1,
+      4
+    ],
+    "installation_row": [
+      5,
+      8,
+      1,
+      2
+    ],
+    "probe": 5,
+    "at_cut": [
+      3,
+      5
+    ],
+    "after_batch": [
+      4,
+      7
+    ],
+    "committed_count_sum": {
+      "Stay": [
+        8,
+        21
+      ],
+      "Disjoint": [
+        8,
+        21
+      ],
+      "Paired": [
+        8,
+        21
+      ]
+    },
+    "recovery_entries": {
+      "snapshot_plus_suffix": 3,
+      "late_checkpoint_sweep": 5
+    }
+  }
+}

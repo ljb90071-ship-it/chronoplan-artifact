@@ -11,6 +11,22 @@ The executable epoch engine accepts ungrouped source points (`d=1`).
 
 The final derivative must return to zero. Empty responses produce no rows and no
 future derivative keys. With `m` future keys there are at most `m` nonzero segments.
+Pairing in [response_layouts.py](../src/response_layouts.py) treats the base as
+an opening at the frontier and pairs each negative COUNT change with the oldest
+unmatched positive inverse vector. The caller first counts on the committed
+snapshot, then emits on the same ordered changes if the scan completes. A zero
+COUNT change, missing partner, or exhaustion of the open-start limit makes the
+disjoint sweep the available fallback. The 64-start limit bounds scratch. With
+a complete pairing, each entry accounts for two distinct boundaries. Any exact
+alternative row can account for at most two, giving the minimum entry count.
+
+Packed history uses the disjoint snapshot in a 48-byte sorted array. A predecessor
+search and end check return at most one match. Catch-up records and the installation
+batch enter its separate writable index. Each arena includes 8192 bytes for
+metadata and page rounding. At a point, sum the immutable and writable responses.
+A frontier can retire complete expired storage pages, while the reference
+[PackedHistory](../src/response_layouts.py) exposes predecessor logic.
+
 Adjacent equal unit intervals may synthesize to a support longer than the source
 duration limit. This support is physical state and is not passed through ingress
 admission or joined again against old points.
@@ -67,5 +83,11 @@ authoritative until the switch epoch commits; the target is never probed alongsi
 its source. The journal stores inputs/frontiers/transition descriptors and outbox
 replacements under a checksummed commit marker. A sink accepts only newer logical
 epochs; retransmission retains epoch numbers and publisher fencing is separate.
-Checkpoint replay preserves those rules. Those persistence and concurrency
-mechanisms require an engine integration and are described, not implemented here.
+A switch depends on its build checkpoint and ordered interval/frontier suffix
+until a durable checkpoint includes the installed state. Re-sweeping a later
+unswitched checkpoint can give the right response with too many physical entries
+for the prior reservation. The exact cut example in
+[shape_replay.py](../examples/shape_replay.py) shows three entries from replaying
+the build geometry and five from sweeping the later response. The examples
+exercise sequential response operations. An engine supplies the journal,
+concurrent installation, and recovery service.
