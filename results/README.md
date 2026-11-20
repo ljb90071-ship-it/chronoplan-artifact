@@ -32,7 +32,11 @@ are bytes after including 4,096 extra intervals. A null value means the pairing
 test rejects that response. Index requests count invocations at timestamps inside
 each component's time envelope, and historical-row touches count only records
 whose payload contributes, over 40,000 probes per response. Both counts measure
-logical work. The paper figures are available in [figures](../figures).
+logical work. In the reservation chart, the 3 MiB boundary uses the same scale
+for all layouts. The hatched region is the 4,096-slot catch-up allowance.
+The paired row for changing SUM shows an unavailable status because a SUM
+change with no COUNT change cannot be matched. The paper figures are available
+in [figures](../figures).
 
 ## Trial summaries and decision populations
 
